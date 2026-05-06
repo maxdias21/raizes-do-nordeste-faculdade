@@ -1,0 +1,104 @@
+.userInfoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+}
+
+.userInfo {
+    gap: 10px;
+    flex-direction: row;
+    display: flex;
+    margin-left: auto;
+
+}
+
+.notification {
+    display: flex;
+    gap: 5px;
+    height: 100%;
+    cursor: pointer;
+
+    span {
+        font-weight: bold;
+    }
+}
+
+.showMenu {
+    position: absolute;
+    z-index: 10;
+    height: 500px;
+    padding: 30px;
+    gap: 30px;
+    right: 0;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartTitle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.closeButton {
+    cursor: pointer;
+
+    &:hover {
+        color: red;
+        transform: scale(1.2);
+    }
+}
+
+.cartContent {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid #dddcdc;
+    padding: 10px;
+}
+
+.avatar img{
+    border-radius: 50%;
+}
+
+.userDetails {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+
+    p {
+        margin-left: 15px;
+    }
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (min-width: 48rem)  {
+    .userInfoContainer {
+        flex-direction: row;
+    }
+}

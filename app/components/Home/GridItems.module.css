@@ -1,0 +1,43 @@
+.gridItems {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: 150px;
+    gap: 20px;
+}
+
+.gridItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 20px 20px 20px;
+    background-color: white;
+    border-radius: 10px;
+
+    svg {
+        font-size: 1.5rem;
+        filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.5));
+    }
+}
+
+.gridFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.gridItemTitle {
+    font-weight: bold;
+}
+
+.gridItemSubtitle {
+    font-size: 0.8rem;
+    color: #505050;
+}
+
+@media (min-width: 48rem)  {
+    .gridItems {
+        grid-template-columns: repeat(4,1fr);
+    }
+}

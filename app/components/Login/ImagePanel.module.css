@@ -1,0 +1,27 @@
+/* ===========================
+   Image Panel
+=========================== */
+.image {
+    display: none;
+}
+
+/* ===========================
+   Responsive — Tablet+
+=========================== */
+@media (min-width: 48rem) {
+    .image {
+        display: block;
+        grid-area: image;
+        height: 100vh;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 300px;
+        image-rendering: pixelated;
+    }
+
+    .image img {
+        height: 100%;
+        width: 100%;
+    }
+}

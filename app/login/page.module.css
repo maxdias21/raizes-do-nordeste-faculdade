@@ -1,0 +1,49 @@
+/* ===========================
+   Container
+=========================== */
+.container {
+    align-items: center;
+    display: grid;
+    grid-template-areas: "login";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    justify-items: center;
+    padding-top: 30px;
+    width: 100vw;
+    position: relative;
+}
+
+/* ===========================
+   Login Container
+=========================== */
+.login__container {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    grid-area: login;
+    width: 70%;
+}
+
+.login__container .login__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===========================
+   Responsive — Tablet+
+=========================== */
+@media (min-width: 48rem) {
+    .container {
+        gap: 20px;
+        grid-template-areas: "image login";
+        grid-template-columns: 300px 1fr;
+    }
+
+    .login__container .login__content .login__form input:focus {
+        border: 1px solid #b6b6b6;
+    }
+}

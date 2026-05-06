@@ -1,0 +1,33 @@
+/* page.module.css */
+
+.container {
+    display: grid;
+    grid-template-areas: "header" "content";
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr;
+    min-height: 100vh;
+    position: relative;
+}
+
+.content {
+    grid-area: content;
+}
+
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 40px;
+}
+
+@media (min-width: 48rem) {
+    .container {
+        grid-template-areas: "header content";
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 1fr;
+        display: grid;
+        align-items: start;
+        padding: 20px;
+    }
+
+}

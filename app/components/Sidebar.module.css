@@ -1,0 +1,105 @@
+.navbar {
+    grid-area: header;
+    z-index: 999;
+    background: white;
+}
+
+.navbarMenu {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    ul {
+        width: 100%;
+        display: block;
+
+        li {
+            width: 100%;
+            display: block;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+            width: 100%;
+            display: block;
+            padding: 20px;
+        }
+    }
+}
+
+.navbarItems {
+    display: flex;
+    background: white;
+    flex-direction: column;
+    gap: 25px;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    transition: opacity 0.3s ease-out;
+}
+
+.noNavbarItems {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.toggleButton {
+    position: relative;
+    margin-left: auto;
+    margin-right: 10px;
+    height: 60%;
+    width: 50px;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+@media (min-width: 48rem) {
+    .container {
+        grid-template-areas: "header content";
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 1fr;
+        display: grid;
+        justify-items: start;
+        align-items: start;
+        padding: 20px;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 300px;
+        left: 0;
+    }
+
+    .navbarMenu {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        box-shadow: 1px 1px 1px rgba(133, 130, 130, 0.63);
+
+        ul li a {
+            &:hover {
+                background-color: #9f976e;
+            }
+        }
+    }
+
+    .navbarItems {
+        position: static;
+        flex-direction: column;
+        padding-top: 20px;
+        background: none;
+    }
+
+    .toggleButton,
+    .noNavbarItems {
+        display: none;
+    }
+}
