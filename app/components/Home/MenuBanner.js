@@ -8,10 +8,9 @@ function MenuBanner() {
                 src="/assets/sidebar1-logo-login.png"
                 alt="Banner"
                 fill
-                className={styles.image}
             />
 
-            <p className={styles.text}>
+            <p>
                 Comece o seu dia com o melhor do Nordeste!
             </p>
 

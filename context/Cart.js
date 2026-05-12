@@ -17,10 +17,26 @@ export function CartProvider({children}) {
             return [];
         }
     });
+    const [orders, setOrders] = useState(() => {
+        if (typeof window === "undefined") {
+            return [];
+        }
+
+        try {
+            const data = localStorage.getItem("order");
+            return data ? JSON.parse(data) : [];
+        } catch {
+            return [];
+        }
+    });
 
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cart));
     }, [cart]);
+
+    useEffect(() => {
+        localStorage.setItem("order", JSON.stringify(orders));
+    }, [orders]);
 
     function addToCart(food) {
         const exists = cart.some((item) => item.id === food.id);
@@ -30,6 +46,13 @@ export function CartProvider({children}) {
                 {...item, quantity: item.quantity + 1} : item));
         } else {
             setCart((prevState) => [...prevState, {...food, quantity: 1}]);
+        }
+    }
+
+    function addOrder() {
+        if (cart.length > 0) {
+            setOrders((prevState) => [...prevState, {items: cart, id: Date.now(), date: new Date()}]);
+            setCart([]);
         }
     }
 
@@ -56,7 +79,7 @@ export function CartProvider({children}) {
     }
 
     return (
-        <CartContext.Provider value={{addToCart, cart, removeCart, totalPrice, totalItems}}>
+        <CartContext.Provider value={{addToCart, cart, removeCart, totalPrice, totalItems, addOrder, orders}}>
             {children}
         </CartContext.Provider>
     );

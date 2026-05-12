@@ -91,6 +91,16 @@
     }
 }
 
+.buyButton {
+    background: #cfcfcf;
+    cursor: pointer;
+    font-size: 1.1rem;
+
+    &:hover {
+        background: #b3b3b3;
+    }
+}
+
 .greeting {
     display: flex;
     flex-direction: column;

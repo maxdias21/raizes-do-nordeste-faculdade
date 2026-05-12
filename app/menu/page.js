@@ -62,7 +62,6 @@ function Menu() {
                                                    onClick={() => removeCart(food)}>-</span>
                                                 <span key={item.id}>{item.quantity ? item.quantity : 0}</span>
                                             </React.Fragment>
-
                                         ))}
                                         <span className={styles.remove}
                                               onClick={() => addToCart(food)}>+</span>

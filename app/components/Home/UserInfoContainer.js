@@ -6,17 +6,16 @@ import {faBell, faXmark} from "@fortawesome/free-solid-svg-icons";
 
 import {useContext, useState} from "react";
 import {CartContext} from "../../../context/Cart";
+import foods from "../../../data/foods";
 
 
 function UserInfoContainer() {
     const [showMenu, setShowMenu] = useState(false);
 
-    const {totalPrice, totalItems} = useContext(CartContext);
+    const {totalPrice, totalItems, addOrder, cart} = useContext(CartContext);
     const price = totalPrice();
     const items = totalItems();
 
-    console.log(price);
-    console.log(items);
 
     return (
         <header className={styles.userInfoContainer}>
@@ -33,7 +32,7 @@ function UserInfoContainer() {
                 {showMenu && (
                     <div className={`${showMenu && styles.showMenu}`}>
                         <div className={styles.header}>
-                            <div className={styles.cartTitle}>ITENS NO CARRINHO({items.length})</div>
+                            <div className={styles.cartTitle}>ITENS NO CARRINHO ({items.length})</div>
                             <div onClick={() => setShowMenu(false)} className={styles.closeButton}>
                                 <FontAwesomeIcon icon={faXmark} />
                             </div>
@@ -48,6 +47,11 @@ function UserInfoContainer() {
                                 </div>
                             ))}
                         </div>
+                        {cart.length > 0 && (
+                            <button onClick={() => addOrder()} className={`${styles.info} ${styles.buyButton}`}>
+                                Finalizar pedido
+                            </button>
+                        )}
                     </div>
                 )}
 

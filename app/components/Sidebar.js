@@ -62,25 +62,25 @@ function Sidebar() {
                     </li>
 
                     <li>
-                        <Link href="/pedidos">
+                        <Link href="/orders">
                             <FontAwesomeIcon icon={faBoxOpen}/> Meus pedidos
                         </Link>
                     </li>
 
                     <li>
-                        <Link href="/cardapio">
+                        <Link href="/menu">
                             <FontAwesomeIcon icon={faUtensils}/> Cardápio
                         </Link>
                     </li>
 
                     <li>
-                        <Link href="/fidelidade">
+                        <Link href="/loyalty">
                             <FontAwesomeIcon icon={faGift}/> Fidelidade
                         </Link>
                     </li>
 
                     <li>
-                        <Link href="/promocoes">
+                        <Link href="/loyalty">
                             <FontAwesomeIcon icon={faTags}/> Promoções
                         </Link>
                     </li>
