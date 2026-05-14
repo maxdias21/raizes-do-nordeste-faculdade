@@ -7,12 +7,14 @@ import {faBell, faXmark} from "@fortawesome/free-solid-svg-icons";
 import {useContext, useState} from "react";
 import {CartContext} from "../../../context/Cart";
 import foods from "../../../data/foods";
+import {UserContext} from "../../../context/User";
 
 
 function UserInfoContainer() {
     const [showMenu, setShowMenu] = useState(false);
 
     const {totalPrice, totalItems, addOrder, cart} = useContext(CartContext);
+
     const price = totalPrice();
     const items = totalItems();
 

@@ -1,6 +1,8 @@
 "use client";
 
-import {useState, createContext, useEffect} from "react";
+import {useState, createContext, useEffect, useContext} from "react";
+
+import {UserContext} from "./User";
 
 export const CartContext = createContext();
 
@@ -30,6 +32,8 @@ export function CartProvider({children}) {
         }
     });
 
+    const {addPoints} = useContext(UserContext)
+
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cart));
     }, [cart]);
@@ -50,6 +54,8 @@ export function CartProvider({children}) {
     }
 
     function addOrder() {
+        addPoints(cart);
+
         if (cart.length > 0) {
             setOrders((prevState) => [...prevState, {items: cart, id: Date.now(), date: new Date()}]);
             setCart([]);

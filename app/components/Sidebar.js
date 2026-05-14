@@ -80,22 +80,11 @@ function Sidebar() {
                     </li>
 
                     <li>
-                        <Link href="/loyalty">
-                            <FontAwesomeIcon icon={faTags}/> Promoções
-                        </Link>
-                    </li>
-
-                    <li>
                         <Link href="/unidades">
                             <FontAwesomeIcon icon={faStore}/> Minhas unidades
                         </Link>
                     </li>
 
-                    <li>
-                        <Link href="/perfil">
-                            <FontAwesomeIcon icon={faUser}/> Perfil
-                        </Link>
-                    </li>
 
                     <li>
                         <Link href="/logout">
