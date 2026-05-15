@@ -6,7 +6,7 @@ import { faUtensils, faClipboardList, faStar, faTag } from "@fortawesome/free-so
 function GridItems() {
     return (
         <section className={styles.gridItems}>
-            <article className={styles.gridItem}>
+            <a href="/menu" className={styles.gridItem}>
                 <figure className={styles.gridItemImage}>
                     <FontAwesomeIcon icon={faUtensils} />
                 </figure>
@@ -14,9 +14,9 @@ function GridItems() {
                     <p className={styles.gridItemTitle}>Fazer pedido</p>
                     <span className={styles.gridItemSubtitle}>Retirar na loja</span>
                 </footer>
-            </article>
+            </a>
 
-            <article className={styles.gridItem}>
+            <a href="/orders" className={styles.gridItem}>
                 <figure className={styles.gridItemImage}>
                     <FontAwesomeIcon icon={faClipboardList} />
                 </figure>
@@ -24,9 +24,9 @@ function GridItems() {
                     <p className={styles.gridItemTitle}>Meus pedidos</p>
                     <span className={styles.gridItemSubtitle}>Acompanhe aqui</span>
                 </footer>
-            </article>
+            </a>
 
-            <article className={styles.gridItem}>
+            <a href="/loyalty" className={styles.gridItem}>
                 <figure className={styles.gridItemImage}>
                     <FontAwesomeIcon icon={faStar} />
                 </figure>
@@ -34,9 +34,9 @@ function GridItems() {
                     <p className={styles.gridItemTitle}>Fidelidade</p>
                     <span className={styles.gridItemSubtitle}>Seus pontos</span>
                 </footer>
-            </article>
+            </a>
 
-            <article className={styles.gridItem}>
+            <a href="/menu" className={styles.gridItem}>
                 <figure className={styles.gridItemImage}>
                     <FontAwesomeIcon icon={faTag} />
                 </figure>
@@ -44,7 +44,7 @@ function GridItems() {
                     <p className={styles.gridItemTitle}>Promoções</p>
                     <span className={styles.gridItemSubtitle}>Ofertas especiais</span>
                 </footer>
-            </article>
+            </a>
         </section>
     );
 }

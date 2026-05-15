@@ -1,9 +1,10 @@
+"use client";
+
 import styles from "./page.module.css";
 
 import Link from "next/dist/client/link";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import React, {useContext} from "react";
+import {UserContext} from "../../context/User";
 
 const STORES = [
     {
@@ -11,7 +12,7 @@ const STORES = [
         name: "Loja Boa Viagem",
         location: "Recife/PE",
         address: "Av. Boa Viagem, 1234",
-        selected: true
+        selected: true,
     },
     {
         id: 2,
@@ -58,6 +59,8 @@ const STORES = [
 ];
 
 function StorePage() {
+    const {addStore, profile} = useContext(UserContext);
+
     return (
         <main className={styles.container}>
             <div className={styles.pageHeader}>
@@ -74,7 +77,10 @@ function StorePage() {
                         </div>
 
                         <p>{item.address}</p>
-                        <button className={styles.selected}>Selecionar essa loja?</button>
+                        {profile.store === item.id ?
+                            <span className={styles.selected}>Selecionado</span> :
+                            <button onClick={() => addStore(item.id)}>Selecionar essa
+                                loja?</button>}
                     </div>
                 ))}
             </div>

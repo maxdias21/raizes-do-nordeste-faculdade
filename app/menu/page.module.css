@@ -52,6 +52,7 @@
 
 .quantity, .add, .remove {
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .price {
@@ -102,4 +103,16 @@
     top: 12px;
     left: 4px;
     height: 15px;
+}
+
+.exclusive {
+    color: green;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: underline;;
+}
+
+.foundStore {
+    font-size: 1rem;
+    text-decoration: none;
 }

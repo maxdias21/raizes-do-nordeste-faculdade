@@ -23,6 +23,10 @@ export function UserProvider({children}) {
 
     }, [profile]);
 
+    function addStore(newStore) {
+        setProfile((prevState) => ({...prevState,store: newStore}));
+    }
+
     function addPoints(cart) {
         const getPoints = Math.floor(cart.map((item) => item.price * item.quantity).reduce((acc, current) => acc + current, 0));
 
@@ -34,7 +38,7 @@ export function UserProvider({children}) {
     }
 
     return (
-        <UserContext.Provider value={{profile, setProfile, addPoints, redeemPoints}}>
+        <UserContext.Provider value={{profile, setProfile, addPoints, redeemPoints, addStore}}>
             {children}
         </UserContext.Provider>
     );

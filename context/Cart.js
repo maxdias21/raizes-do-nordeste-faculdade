@@ -42,14 +42,14 @@ export function CartProvider({children}) {
         localStorage.setItem("order", JSON.stringify(orders));
     }, [orders]);
 
-    function addToCart(food) {
+    function addToCart({food, profile}) {
         const exists = cart.some((item) => item.id === food.id);
 
         if (exists) {
             setCart((prevState) => prevState.map((item) => item.id === food.id ?
-                {...item, quantity: item.quantity + 1} : item));
+                {...item, quantity: item.quantity + 1, store: profile?.store} : item));
         } else {
-            setCart((prevState) => [...prevState, {...food, quantity: 1}]);
+            setCart((prevState) => [...prevState, {...food, quantity: 1, store: profile?.store}]);
         }
     }
 

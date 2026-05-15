@@ -13,7 +13,7 @@
 }
 
 .menuBanner p,
-.menuBanner button {
+.menuBanner .button {
     position: absolute;
     top: 30%;
     transform: translateY(-30%);
@@ -29,13 +29,18 @@
     width: 80%;
 }
 
-.menuBanner button {
+.menuBanner .button {
     top: 220px;
     padding: 10px 15px;
     border-radius: 10px;
     cursor: pointer;
-    color: #592a2a;
-    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    background: white;
+
+    &:hover {
+        background: #ecebeb;
+    }
 }
 
 

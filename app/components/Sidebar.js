@@ -80,7 +80,7 @@ function Sidebar() {
                     </li>
 
                     <li>
-                        <Link href="/unidades">
+                        <Link href="/store">
                             <FontAwesomeIcon icon={faStore}/> Minhas unidades
                         </Link>
                     </li>

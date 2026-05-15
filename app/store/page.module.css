@@ -45,6 +45,9 @@
         outline: none !important;
         color: green !important;
         font-weight: bold !important;
+        width: fit-content;
+        padding: 5px;
+        border-radius: 5px;
     }
 
     button {

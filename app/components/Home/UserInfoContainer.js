@@ -6,23 +6,20 @@ import {faBell, faXmark} from "@fortawesome/free-solid-svg-icons";
 
 import {useContext, useState} from "react";
 import {CartContext} from "../../../context/Cart";
-import foods from "../../../data/foods";
-import {UserContext} from "../../../context/User";
 
 
 function UserInfoContainer() {
     const [showMenu, setShowMenu] = useState(false);
 
-    const {totalPrice, totalItems, addOrder, cart} = useContext(CartContext);
+    const {totalItems, addOrder, cart} = useContext(CartContext);
 
-    const price = totalPrice();
     const items = totalItems();
 
 
     return (
         <header className={styles.userInfoContainer}>
             <div className={styles.greeting}>
-                <h3>Olá, Maria 👋</h3>
+                <h3>Olá, Uninter 👋</h3>
                 <p>Que bom ter você por aqui</p>
             </div>
 
@@ -58,7 +55,7 @@ function UserInfoContainer() {
                 )}
 
                 <div className={styles.userDetails}>
-                    <a>Maria Silva</a>
+                    <a>Uninter Santo Amaro</a>
                     <p>1.250 pts</p>
                 </div>
 

@@ -4,7 +4,6 @@ import styles from "./page.module.css";
 
 import Link from "next/dist/client/link";
 import React, {useContext, useEffect, useState} from "react";
-import Image from "next/image";
 import {UserContext} from "../../context/User";
 
 const ITEMS_REWARDS = [
@@ -84,7 +83,7 @@ function LoyaltyPage() {
             </div>
 
             <div className={styles.pointsQuantity}>
-                {profile?.points > 0 ? <p className={animationPoints}>Parabéns, você tem um total de {profile.points} pontos.</p> : <p>Poxa, você ainda não tem pontos. Que tal fazer uma comprinha para poder acumular pontos? </p>}
+                {profile?.points > 0 ? <p className={styles.animationPoints}>Parabéns, você tem um total de {profile.points} pontos.</p> : <p>Poxa, você ainda não tem pontos. Que tal fazer uma comprinha para poder acumular pontos? </p>}
             </div>
 
             <div className={styles.rewardsInfo}>
@@ -118,7 +117,7 @@ function LoyaltyPage() {
                     <p>O cupom só pode ser usado uma única vez exclusivamente por você.</p>
                 </div>
                 <div className={styles.rewardsContent}>
-                    {itemsRewards.map((item, index) => (
+                    {itemsRewards?.map((item, index) => (
                         <div key={index} className={styles.item}>
                             <div className={styles.infoItem}>
                                 <p>{item.name}</p>

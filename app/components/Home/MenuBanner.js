@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./MenuBanner.module.css";
+import Link from "next/dist/client/link";
 
 function MenuBanner() {
     return (
@@ -14,9 +15,9 @@ function MenuBanner() {
                 Comece o seu dia com o melhor do Nordeste!
             </p>
 
-            <button className={styles.button}>
+            <Link href={"/menu"} className={styles.button}>
                 Ver cardápio
-            </button>
+            </Link>
         </article>
     );
 }
