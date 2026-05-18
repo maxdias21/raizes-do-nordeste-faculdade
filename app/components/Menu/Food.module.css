@@ -1,0 +1,57 @@
+.content {
+    grid-area: content;
+    display: flex;
+    gap: 20px;
+    border-radius: 5px;
+    padding: 10px;
+
+    box-shadow: 2px 2px 8px gray, -2px -2px 8px gray;
+
+    img {
+        height: 80px;
+        width: 80px;
+        border-radius: 5px;
+    }
+}
+
+.foodInfo {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    flex: 1;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+}
+
+.quantityContent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    padding-right: 10px;
+    font-size: 1.7rem;
+}
+
+.quantity, .add, .remove {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.exclusive {
+    color: green;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: underline;;
+}
+
+.foundStore {
+    font-size: 1rem;
+    text-decoration: none;
+}

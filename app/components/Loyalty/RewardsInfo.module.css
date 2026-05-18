@@ -1,0 +1,56 @@
+.content {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.rewardsInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #aa7f43;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.rewardsMainText {
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.textInfo {
+    text-align: center;
+    font-size: 0.8rem;
+    width: 100%;
+    color: #5c3636;
+}
+
+@media (min-width: 48rem) {
+    .content {
+        flex-direction: row;
+    }
+}

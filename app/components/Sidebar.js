@@ -12,7 +12,7 @@ import {
     faTags,
     faStore,
     faUser,
-    faRightFromBracket,
+    faRightFromBracket, faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/dist/client/link";
 
@@ -44,8 +44,10 @@ function Sidebar() {
         <nav className={styles.navbar}>
             <div className={styles.navbarMenu}>
                 <Image src="/assets/logo-login.png" width={80} height={80} alt="logo"/>
-                <button className={styles.toggleButton} onClick={() => setShowNavbarItems(!showNavbarItems)}>Ok
-                </button>
+
+                <FontAwesomeIcon className={styles.toggleButton} onClick={() => setShowNavbarItems(!showNavbarItems)}
+                                 icon={faBars}/>
+
                 <ul
                     className={
                         isDesktop

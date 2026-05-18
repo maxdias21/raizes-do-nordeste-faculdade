@@ -29,12 +29,12 @@ export function UserProvider({children}) {
 
     function addPoints(cart) {
         const getPoints = Math.floor(cart.map((item) => item.price * item.quantity).reduce((acc, current) => acc + current, 0));
-
-        setProfile((prevState) => ({...prevState, points: prevState.points + getPoints}));
+        console.log(getPoints);
+        setProfile((prevState) => ({...prevState, points: (prevState.points ?? 0)  + getPoints}));
     }
 
     function redeemPoints(points) {
-        setProfile((prevState) => ({...prevState, points: prevState.points - points}));
+        setProfile((prevState) => ({...prevState, points: prevState.points ?? 0 - points}));
     }
 
     return (

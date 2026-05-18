@@ -5,6 +5,8 @@ import styles from "./page.module.css";
 import Link from "next/dist/client/link";
 import React, {useContext} from "react";
 import {UserContext} from "../../context/User";
+import Container from "../components/Container";
+import PageHeader from "../components/PageHeader";
 
 const STORES = [
     {
@@ -62,11 +64,8 @@ function StorePage() {
     const {addStore, profile} = useContext(UserContext);
 
     return (
-        <main className={styles.container}>
-            <div className={styles.pageHeader}>
-                <Link href="/">voltar</Link>
-                <h1>Meus pedidos</h1>
-            </div>
+        <Container>
+            <PageHeader title="Meus pedidos" />
             <div className={styles.storeContainer}>
                 {STORES.map((item, index) => (
                     <div className={styles.storeContent} key={index}>
@@ -84,7 +83,7 @@ function StorePage() {
                     </div>
                 ))}
             </div>
-        </main>
+        </Container>
     );
 }
 

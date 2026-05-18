@@ -1,0 +1,17 @@
+.pageHeader {
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    svg {
+        font-size: 1.3rem;
+        cursor: pointer;
+        color: black;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}

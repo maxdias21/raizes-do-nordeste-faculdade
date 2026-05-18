@@ -6,12 +6,14 @@ import {faBell, faXmark} from "@fortawesome/free-solid-svg-icons";
 
 import {useContext, useState} from "react";
 import {CartContext} from "../../../context/Cart";
+import {UserContext} from "../../../context/User";
 
 
 function UserInfoContainer() {
     const [showMenu, setShowMenu] = useState(false);
 
     const {totalItems, addOrder, cart} = useContext(CartContext);
+    const {profile} = useContext(UserContext);
 
     const items = totalItems();
 
@@ -33,11 +35,11 @@ function UserInfoContainer() {
                         <div className={styles.header}>
                             <div className={styles.cartTitle}>ITENS NO CARRINHO ({items.length})</div>
                             <div onClick={() => setShowMenu(false)} className={styles.closeButton}>
-                                <FontAwesomeIcon icon={faXmark} />
+                                <FontAwesomeIcon icon={faXmark}/>
                             </div>
                         </div>
 
-                        <div className={styles.cartContent} >
+                        <div className={styles.cartContent}>
                             {items.map((item, index) => (
                                 <div className={styles.info} key={index}>
                                     <div>{item.name}</div>
@@ -56,7 +58,7 @@ function UserInfoContainer() {
 
                 <div className={styles.userDetails}>
                     <a>Uninter Santo Amaro</a>
-                    <p>1.250 pts</p>
+                    <p>{profile.points} pontos</p>
                 </div>
 
                 <figure className={styles.avatar}>

@@ -1,0 +1,113 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.text, .points {
+    font-size: 1.6rem;
+    color: white;
+}
+
+.points {
+    color: #baba5d;
+    font-weight: bold;
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rewardsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rewards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item {
+    display: flex;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    button {
+        border-radius: 5px;
+        padding: 10px 20px 10px 20px;
+        background: white;
+        margin-left: auto;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        outline: 1px solid #959595;
+
+        &:hover {
+            background: #efefef;
+        }
+    }
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p:nth-child(1) {
+        font-weight: bold;
+    }
+
+    p:nth-child(2) {
+        font-size: 0.9rem;
+    }
+}
+
+.rules {
+    margin-bottom: 50px;
+    font-size: 0.9rem;
+}
+
+.disabled {
+    cursor: not-allowed !important;
+    background: #f8f8f8 !important;
+    text-decoration: line-through !important;
+    color: red;
+}
+
+@keyframes rotateText {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 355px) {
+    .container {
+        padding: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 350px) {
+    .item {
+        flex-direction: column;
+        gap: 30px;
+
+        button {
+            margin-left: 0;
+        }
+    }
+}

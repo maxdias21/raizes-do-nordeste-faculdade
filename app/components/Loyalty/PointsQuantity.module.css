@@ -1,0 +1,27 @@
+.pointsQuantity, .animationPoints {
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 80%;
+    margin: 60px auto;
+}
+
+.animationPoints {
+    animation: rotateText 5s infinite linear;
+    font-size: 1.5rem;
+}
+
+@keyframes rotateText {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@media (min-width: 48rem) {
+    .pointsQuantity {
+        width: 100%;
+        text-align: center;
+    }
+}

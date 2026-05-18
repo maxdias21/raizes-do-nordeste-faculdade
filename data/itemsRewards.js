@@ -1,0 +1,22 @@
+export const ITEMS_REWARDS = [
+    {id: 1, name: "Café Expresso", points: 150, coupon: "CAF3-XP21", redeemed: false},
+    {id: 2, name: "Cappuccino", points: 220, coupon: "CAP9-ZL44", redeemed: false},
+    {id: 3, name: "Pão de Queijo", points: 180, coupon: "PAO7-KM82", redeemed: false},
+    {id: 4, name: "Cookie de Chocolate", points: 200, coupon: "COOK-7XP1", redeemed: false},
+    {id: 5, name: "Brownie", points: 250, coupon: "BRW4-QT99", redeemed: false},
+    {id: 6, name: "Sanduíche Natural", points: 350, coupon: "SAND-PL55", redeemed: false},
+    {id: 7, name: "Suco Natural", points: 300, coupon: "SUC8-WE21", redeemed: false},
+    {id: 8, name: "Hambúrguer Artesanal", points: 700, coupon: "BURG-XD88", redeemed: false},
+    {id: 9, name: "Batata Frita", points: 400, coupon: "BATA-TR73", redeemed: false},
+    {id: 10, name: "Pizza Individual", points: 850, coupon: "PIZZ-AL42", redeemed: false},
+    {id: 11, name: "Milkshake", points: 500, coupon: "MLK5-JP60", redeemed: false},
+    {id: 12, name: "Açaí Pequeno", points: 450, coupon: "ACAI-YU11", redeemed: false},
+    {id: 13, name: "Sorvete", points: 320, coupon: "SORB-VC29", redeemed: false},
+    {id: 14, name: "Refrigerante", points: 150, coupon: "REFR-NA91", redeemed: false},
+    {id: 15, name: "Hot Dog", points: 380, coupon: "HOTD-GF76", redeemed: false},
+    {id: 16, name: "Tapioca", points: 340, coupon: "TAPI-LK54", redeemed: false},
+    {id: 17, name: "Coxinha", points: 210, coupon: "COXI-MM83", redeemed: false},
+    {id: 18, name: "Esfiha", points: 190, coupon: "ESFI-QZ10", redeemed: false},
+    {id: 19, name: "Combo Lanche", points: 1200, coupon: "COMB-RT77", redeemed: false},
+    {id: 20, name: "Prato Executivo", points: 1500, coupon: "PRAT-HJ95", redeemed: false}
+];
