@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 import PageHeader from "../components/PageHeader";
@@ -8,7 +10,7 @@ function OrdersPage() {
     return (
         <Container>
             <PageHeader title="Meus pedidos"/>
-            <Orders />
+            <Orders/>
         </Container>
     );
 }
