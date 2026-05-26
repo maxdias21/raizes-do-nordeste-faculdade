@@ -5,10 +5,10 @@ import React from "react";
 
 import dataFoods from "../../data/foods";
 
-import Search from "../components/Menu/Search";
-import Foods from "../components/Menu/Foods";
-import PageHeader from "../components/PageHeader";
-import Container from "../components/Container";
+import Search from "../../components/Menu/Search";
+import Foods from "../../components/Menu/Foods";
+import PageHeader from "../../components/PageHeader";
+import Container from "../../components/Container";
 
 
 

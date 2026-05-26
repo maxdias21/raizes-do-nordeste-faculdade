@@ -6,11 +6,11 @@ import React, {useContext, useEffect, useState} from "react";
 import {UserContext} from "../../context/User";
 
 import {ITEMS_REWARDS} from "../../data/itemsRewards";
-import PageHeader from "../components/PageHeader";
-import RewardsInfo from "../components/Loyalty/RewardsInfo";
-import Rewards from "../components/Loyalty/Rewards";
-import PointsQuantity from "../components/Loyalty/PointsQuantity";
-import Container from "../components/Container";
+import PageHeader from "../../components/PageHeader";
+import RewardsInfo from "../../components/Loyalty/RewardsInfo";
+import Rewards from "../../components/Loyalty/Rewards";
+import PointsQuantity from "../../components/Loyalty/PointsQuantity";
+import Container from "../../components/Container";
 
 function LoyaltyPage() {
     const {profile} = useContext(UserContext);

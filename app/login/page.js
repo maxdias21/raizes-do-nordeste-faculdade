@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
 
-import Form from "../components/Login/Form";
-import ImagePanel from "../components/Login/ImagePanel";
-import Logo from "../components/Login/Logo";
+import Form from "../../components/Login/Form";
+import ImagePanel from "../../components/Login/ImagePanel";
+import Logo from "../../components/Login/Logo";
 
 function LoginPage() {
     return (

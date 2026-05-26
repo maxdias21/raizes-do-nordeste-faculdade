@@ -1,7 +1,7 @@
 import styles from "./Rewards.module.css";
 
 import React, {useContext} from "react";
-import {UserContext} from "../../../context/User";
+import {UserContext} from "../../context/User";
 
 function Rewards({itemsRewards = []}) {
     const {profile, redeemPoints} = useContext(UserContext);

@@ -2,9 +2,9 @@
 
 import React from "react";
 
-import PageHeader from "../components/PageHeader";
-import Orders from "../components/Orders/Orders";
-import Container from "../components/Container";
+import PageHeader from "../../components/PageHeader";
+import Orders from "../../components/Orders/Orders";
+import Container from "../../components/Container";
 
 function OrdersPage() {
     return (

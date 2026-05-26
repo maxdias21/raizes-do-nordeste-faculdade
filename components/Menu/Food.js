@@ -4,8 +4,8 @@ import Image from "next/image";
 import React, {useContext} from "react";
 import Link from "next/dist/client/link";
 
-import {UserContext} from "../../../context/User";
-import {CartContext} from "../../../context/Cart";
+import {UserContext} from "../../context/User";
+import {CartContext} from "../../context/Cart";
 
 function Food({food}) {
     const {profile} = useContext(UserContext);

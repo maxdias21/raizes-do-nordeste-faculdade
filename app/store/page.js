@@ -5,8 +5,8 @@ import styles from "./page.module.css";
 import Link from "next/dist/client/link";
 import React, {useContext} from "react";
 import {UserContext} from "../../context/User";
-import Container from "../components/Container";
-import PageHeader from "../components/PageHeader";
+import Container from "../../components/Container";
+import PageHeader from "../../components/PageHeader";
 
 const STORES = [
     {

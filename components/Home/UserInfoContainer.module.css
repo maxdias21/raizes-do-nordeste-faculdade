@@ -92,13 +92,13 @@
 }
 
 .buyButton, .disabled {
-    background: #cfcfcf;
+    background: #e61717;
     cursor: pointer;
     font-size: 1.1rem;
     color: white;
 
     &:hover {
-        background: #b3b3b3;
+        opacity: 0.8;
     }
 }
 

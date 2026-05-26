@@ -6,7 +6,7 @@ import {faCheck} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import React, {useContext} from "react";
-import {CartContext} from "../../../context/Cart";
+import {CartContext} from "../../context/Cart";
 
 function Orders() {
     const {orders} = useContext(CartContext);
