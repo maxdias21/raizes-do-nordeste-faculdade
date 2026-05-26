@@ -19,12 +19,20 @@
             display: block;
         }
 
-        li a {
+        li a, button {
             text-decoration: none;
             color: black;
             width: 100%;
             display: block;
+            text-align: start;
             padding: 20px;
+            cursor: pointer;
+        }
+
+        li button {
+            background: transparent;
+            border: none;
+            outline: none;
         }
     }
 }
@@ -85,7 +93,7 @@
         justify-content: start;
         box-shadow: 1px 1px 1px rgba(133, 130, 130, 0.63);
 
-        ul li a {
+        ul li a, button {
             &:hover {
                 background-color: #9f976e;
             }

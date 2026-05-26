@@ -28,8 +28,6 @@ function UserInfoContainer() {
                 resolve();
             }, 5000);
         });
-
-
     }
 
 

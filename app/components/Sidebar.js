@@ -15,11 +15,14 @@ import {
     faRightFromBracket, faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/dist/client/link";
+import {useRouter} from "next/navigation";
 
 
 function Sidebar() {
     const [showNavbarItems, setShowNavbarItems] = useState(false);
     const [isDesktop, setIsDesktop] = useState(false);
+
+    const router = useRouter();
 
     useEffect(() => {
         const media = window.matchMedia("(min-width: 48rem)");
@@ -40,13 +43,19 @@ function Sidebar() {
         };
     }, []);
 
+    function handleClick() {
+        localStorage.clear();
+        router.push('/login');
+    }
+
     return (
         <nav className={styles.navbar}>
             <div className={styles.navbarMenu}>
                 <Image src="/assets/logo-login.png" width={80} height={80} alt="logo"/>
 
                 {!isDesktop && (
-                    <FontAwesomeIcon className={styles.toggleButton} onClick={() => setShowNavbarItems(!showNavbarItems)}
+                    <FontAwesomeIcon className={styles.toggleButton}
+                                     onClick={() => setShowNavbarItems(!showNavbarItems)}
                                      icon={faBars}/>
                 )}
 
@@ -92,9 +101,9 @@ function Sidebar() {
 
 
                     <li>
-                        <Link href="/logout">
-                            <FontAwesomeIcon icon={faRightFromBracket}/> Sair
-                        </Link>
+                        <button onClick={handleClick}>
+                            <FontAwesomeIcon  icon={faRightFromBracket}/> Sair
+                        </button>
                     </li>
                 </ul>
             </div>
