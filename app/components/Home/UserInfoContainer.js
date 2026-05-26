@@ -11,11 +11,26 @@ import {UserContext} from "../../../context/User";
 
 function UserInfoContainer() {
     const [showMenu, setShowMenu] = useState(false);
+    const [textButton, setTextButton] = useState("Finalizar pedido");
 
     const {totalItems, addOrder, cart} = useContext(CartContext);
     const {profile} = useContext(UserContext);
 
     const items = totalItems();
+
+    async function handleClick() {
+        setTextButton("Finalizando pedido...");
+
+        await new Promise(resolve => {
+            setTimeout(() => {
+                setTextButton("Finalizar pedido");
+                addOrder();
+                resolve();
+            }, 5000);
+        });
+
+
+    }
 
 
     return (
@@ -49,8 +64,9 @@ function UserInfoContainer() {
                             ))}
                         </div>
                         {cart.length > 0 && (
-                            <button onClick={() => addOrder()} className={`${styles.info} ${styles.buyButton}`}>
-                                Finalizar pedido
+                            <button onClick={handleClick} className={`${styles.info} 
+                            ${textButton === "Finalizando pedido..." ? styles.disabled :styles.buyButton}`}>
+                                {textButton}
                             </button>
                         )}
                     </div>

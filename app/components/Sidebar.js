@@ -45,8 +45,11 @@ function Sidebar() {
             <div className={styles.navbarMenu}>
                 <Image src="/assets/logo-login.png" width={80} height={80} alt="logo"/>
 
-                <FontAwesomeIcon className={styles.toggleButton} onClick={() => setShowNavbarItems(!showNavbarItems)}
-                                 icon={faBars}/>
+                {!isDesktop && (
+                    <FontAwesomeIcon className={styles.toggleButton} onClick={() => setShowNavbarItems(!showNavbarItems)}
+                                     icon={faBars}/>
+                )}
+
 
                 <ul
                     className={

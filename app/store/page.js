@@ -65,7 +65,7 @@ function StorePage() {
 
     return (
         <Container>
-            <PageHeader title="Meus pedidos" />
+            <PageHeader title="Nossas lojas" />
             <div className={styles.storeContainer}>
                 {STORES.map((item, index) => (
                     <div className={styles.storeContent} key={index}>

@@ -91,14 +91,19 @@
     }
 }
 
-.buyButton {
+.buyButton, .disabled {
     background: #cfcfcf;
     cursor: pointer;
     font-size: 1.1rem;
+    color: white;
 
     &:hover {
         background: #b3b3b3;
     }
+}
+
+.disabled {
+    pointer-events: none;
 }
 
 .greeting {

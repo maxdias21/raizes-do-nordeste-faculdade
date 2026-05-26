@@ -17,7 +17,7 @@ function Menu() {
 
     return (
         <Container>
-            <PageHeader title={"Container"} />
+            <PageHeader title={"Cardápio"} />
                 <Search data={dataFoods} setData={setFoodsFilter} />
                 <Foods data={foodsFilter} setData={setFoodsFilter} />
         </Container>
