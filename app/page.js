@@ -8,13 +8,15 @@ import UserInfoContainer from "../components/Home/UserInfoContainer";
 import GridItems from "../components/Home/GridItems";
 import MenuBanner from "../components/Home/MenuBanner";
 import LastOrder from "../components/Home/LastOrder";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 
 export default function Home() {
-    const [notice, setNotice] = useState(
-        localStorage.getItem("showNotice") !== "false"
-    );
+    const [notice, setNotice] = useState(null);
+
+    useEffect(() => {
+        setNotice(localStorage.getItem("showNotice") !== "false");
+    }, [setNotice])
 
     function handleSubmit() {
         localStorage.setItem("showNotice", "false");
