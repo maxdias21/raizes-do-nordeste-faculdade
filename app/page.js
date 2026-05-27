@@ -1,14 +1,15 @@
 'use client';
 
 import styles from './page.module.css';
-import Sidebar from '../components/Sidebar';
 
+import Sidebar from '../components/Sidebar';
 import UserInfoContainer from '../components/Home/UserInfoContainer';
 import GridItems from '../components/Home/GridItems';
 import MenuBanner from '../components/Home/MenuBanner';
-import LastOrder from '../components/Home/LastOrder';
-import { useEffect, useState } from 'react';
 import Notice from '../components/Notice';
+
+import { useContext, useEffect, useState } from 'react';
+import { CartContext } from '../context/Cart';
 
 export default function Home() {
   const [notice, setNotice] = useState(null);
@@ -31,7 +32,6 @@ export default function Home() {
           <UserInfoContainer />
           <MenuBanner />
           <GridItems />
-          <LastOrder />
         </section>
       </main>
     </div>
