@@ -1,111 +1,33 @@
 /* page.module.css */
 
 .container {
-    display: grid;
-    grid-template-areas: "header" "content";
-    grid-template-columns: 1fr;
-    grid-template-rows: 80px 1fr;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
+  display: grid;
+  grid-template-areas: 'header' 'content';
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .content {
-    grid-area: content;
+  grid-area: content;
 }
 
 .homeContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 40px;
-}
-
-.notice {
-    height: 100%;
-    width: 100vw;
-    background-color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 12;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.noticeHeader {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-}
-
-.inner {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.noticeItem {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-
-}
-
-.noticeItemHeader {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.noticeItemHeaderRequired {
-    display: flex;
-    gap: 5px;
-    flex-direction: column;
-    align-items: start
-}
-
-.noticeBody, .noticeFooter {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.noticeFooter {
-    button {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 28px;
-        font-size: 15px;
-        font-weight: 500;
-        cursor: pointer;
-        border: none;
-        border-radius: 12px;
-
-        /* cores — adapta para as variáveis do seu projeto */
-        color: #ffffff;
-        background: #1a1a1a;
-
-        transition: opacity 0.15s, transform 0.1s;
-
-        &:hover {
-            opacity: 0.88;
-        }
-    }
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 40px;
 }
 
 @media (min-width: 48rem) {
-    .container {
-        grid-template-areas: "header content";
-        grid-template-columns: 300px 1fr;
-        grid-template-rows: 1fr;
-        display: grid;
-        align-items: start;
-        padding: 20px;
-    }
+  .container {
+    grid-template-areas: 'header content';
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr;
+    display: grid;
+    align-items: start;
+    padding: 20px;
+  }
 }

@@ -1,0 +1,79 @@
+.notice {
+  height: 100%;
+  width: 100vw;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noticeHeader {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.inner {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.noticeItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.noticeItemHeader {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.noticeItemHeaderRequired {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: start;
+}
+
+.noticeBody,
+.noticeFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.noticeFooter {
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+
+    /* cores — adapta para as variáveis do seu projeto */
+    color: #ffffff;
+    background: #1a1a1a;
+
+    transition:
+      opacity 0.15s,
+      transform 0.1s;
+
+    &:hover {
+      opacity: 0.88;
+    }
+  }
+}
